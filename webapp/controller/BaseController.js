@@ -9,9 +9,9 @@ sap.ui.define([
 
     return BaseController.extend("idemploye.readtwoentitys.controller.BaseController", {
       onInit: function () {
-  
+        this.onReadAll();
       },
-      onBeforeRendering(evt) {
+      onReadAll(evt) {
 
         var that = this;
 

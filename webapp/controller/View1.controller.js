@@ -13,12 +13,22 @@ sap.ui.define([
                 
                 
             },
-    onRead1:function () {
-        var tab1="userSet";
-        this.onBeforeRendering(tab1);
+    // onRead1:function () {
+    //     var tab1="userSet";
+    //     this.onReadAll(tab1);
       
-    },
-            
+    // },  
+          onRead1: function () {
+        var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+        oRouter.getRoute("View1").attachPatternMatched(this.onObjectMatch, this);
+       
+       },
+        
+          onObjectMatch: function () {
+            debugger;
+            var tab1="userSet";
+            this.onReadAll(tab1);
+          },      
             
       rightarrow: function () {
                                  

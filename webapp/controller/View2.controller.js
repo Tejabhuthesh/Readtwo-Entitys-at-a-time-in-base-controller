@@ -10,24 +10,19 @@ sap.ui.define([
         return BaseController.extend("idemploye.readtwoentitys.controller.View2", {
             onInit: function () {
               this.onRead();
-      
             } ,
 
            onRead: function () {
-            var tab1="MaraSet";
-              
-            this.onBeforeRendering(tab1);
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.getRoute("View2").attachPatternMatched(this.onRouteMatch, this);
+           
            },
-            // onAfterRendering() {
-            //     var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-        
-            //     oRouter.getRoute("View2").attachPatternMatched(this.onRouteMatch, this);
-            //   },
-            //   onRouteMatch: function () {
-            //     debugger;
-            //     var tab1="MaraSet";
-            //     this.onBeforeRendering(tab1);
-            //   },
+            
+              onRouteMatch: function () {
+                debugger;
+                var tab1="MaraSet";
+                this.onReadAll(tab1);
+              },
                onNavBack: function () {
                 history.go(-1);
         

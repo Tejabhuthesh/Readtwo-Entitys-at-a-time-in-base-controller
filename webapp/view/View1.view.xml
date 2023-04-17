@@ -9,7 +9,7 @@
         </headerContent>
         <content>
           
-                <Table width="80rem" mode="MultiSelect" id="idProductsTable" inset="true"  headerText="EMPLOYE DETAILS" visible="true" alternateRowColors="true"
+                <Table width="80rem"  id="idProductsTable" inset="true"  headerText="EMPLOYE DETAILS" visible="true" alternateRowColors="true"
                  items="{
 			path: 'Data1>/results'
                   , sorter: {
